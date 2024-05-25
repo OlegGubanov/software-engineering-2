@@ -1,19 +1,10 @@
-from transformers import (
-    TrOCRProcessor,
-    VisionEncoderDecoderModel,
-    AutoTokenizer,
-    AutoModelForSeq2SeqLM,
-)
 from PIL import Image
 import streamlit as st
+import models
 
-ocr_model_id = "raxtemur/trocr-base-ru"
-processor = TrOCRProcessor.from_pretrained(ocr_model_id, from_pt=True)
-ocr_model = VisionEncoderDecoderModel.from_pretrained(ocr_model_id)
 
-spell_check_model_id = "ai-forever/sage-fredt5-distilled-95m"
-tokenizer = AutoTokenizer.from_pretrained(spell_check_model_id)
-spell_check_model = AutoModelForSeq2SeqLM.from_pretrained(spell_check_model_id)
+processor, ocr_model = models.load_ocr_models()
+tokenizer, spell_check_model = models.load_spell_check_models()
 
 img = st.file_uploader(label="Загрузите изображение")
 if img is not None:
