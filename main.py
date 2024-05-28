@@ -7,7 +7,7 @@ from utils import getFormattedDiff
 
 img = st.file_uploader(label="Загрузите изображение")
 if img is not None:
-    image = Image.open(img)
+    image = Image.open(img).convert("RGB")
     st.text("Загруженное изображение:")
     st.image(image)
 
