@@ -4,10 +4,10 @@
 
 # Модели
 
-Модель для распознавания текста
+Модель для распознавания текста  
 **[raxtemur/trocr-base-ru](https://huggingface.co/raxtemur/trocr-base-ru)**
 
-Модель для исправления опечаток, пунктуационных и орфографических ошибок
+Модель для исправления опечаток, пунктуационных и орфографических ошибок  
 **[ai-forever/sage-fredt5-distilled-95m](https://huggingface.co/ai-forever/sage-fredt5-distilled-95m)**
 
 # Использование
@@ -27,5 +27,5 @@ streamlit run main.py
 
 # Демо
 
-Вы можете попробовать приложение по ссылке:
+Вы можете попробовать приложение по ссылке:  
 https://software-engineering-2.streamlit.app/
